@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty SMM Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-translate="brand_name">Vika SMM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-translate="nav_services">Usługi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing" data-translate="nav_pricing">Cennik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-translate="nav_contact">Kontakt</a>
+                    </li>
+                </ul>
+                <div class="language-switcher">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown">
+                            <img src="./flag-of-poland.webp" alt="Polski" class="flag-img current-flag">
+                            <span class="current-lang">PL</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="pl">
+                                    <img src="./flag-of-poland.webp" alt="Polski" class="flag-img"> Polski
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="uk">
+                                    <img src="./flag-of-ukraine.webp" alt="Українська" class="flag-img"> Українська
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головний банер -->
+    <header class="hero">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 data-translate="hero_title">Twój Sukces w Social Media</h1>
+                    <p class="lead" data-translate="hero_subtitle">Profesjonalne zarządzanie mediami społecznościowymi dla branży beauty</p>
+                    <a href="#services" class="btn btn-primary btn-lg mt-4" data-translate="hero_button">Poznaj Nasze Usługi</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Послуги -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-translate="services_title">Nasze Usługi</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-camera fa-3x mb-3"></i>
+                        <h3 data-translate="service1_title">Tworzenie Contentu</h3>
+                        <p data-translate="service1_desc">Profesjonalne zdjęcia i grafiki dla social media</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h3 data-translate="service2_title">Strategia SMM</h3>
+                        <p data-translate="service2_desc">Indywidualna strategia rozwoju w social media</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-comments fa-3x mb-3"></i>
+                        <h3 data-translate="service3_title">Engagement</h3>
+                        <p data-translate="service3_desc">Aktywne prowadzenie profili i komunikacja z obserwującymi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифи -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-translate="pricing_title">Cennik</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center" data-translate="plan_instagram">Instagram</h3>
+                            <h2 class="card-price text-center">1299 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="features-group">
+                                <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
+                                <ul class="list-unstyled common-features">
+                                    <!-- Загальні функції -->
+                                </ul>
+                                <h4 data-translate="instagram_features_title">Instagram:</h4>
+                                <ul class="list-unstyled instagram-features">
+                                    <!-- Instagram функції -->
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100" data-translate="price_button">Wybierz Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card featured">
+                        <div class="card-body">
+                            <h3 class="card-title text-center" data-translate="plan_full">Instagram + TikTok</h3>
+                            <h2 class="card-price text-center">2499 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="features-group">
+                                <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
+                                <ul class="list-unstyled common-features">
+                                    <!-- Загальні функції -->
+                                </ul>
+                                <h4 data-translate="additional_benefits">Dodatkowe korzyści:</h4>
+                                <ul class="list-unstyled full-features">
+                                    <!-- Повний пакет функцій -->
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100" data-translate="price_button">Wybierz Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center" data-translate="plan_tiktok">TikTok</h3>
+                            <h2 class="card-price text-center">1499 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="features-group">
+                                <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
+                                <ul class="list-unstyled common-features">
+                                    <!-- Загальні функції -->
+                                </ul>
+                                <h4 data-translate="tiktok_features_title">TikTok:</h4>
+                                <ul class="list-unstyled tiktok-features">
+                                    <!-- TikTok функції -->
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary w-100" data-translate="price_button">Wybierz Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-translate="contact_title">Kontakt</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form id="contactForm" action="https://formspree.io/f/mwpvnlkd" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" required placeholder="Imię i nazwisko" data-translate="contact_name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="_replyto" class="form-control" required placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" name="phone" class="form-control" required pattern="[0-9]{9,}" title="Minimum 9 cyfr" placeholder="Telefon" data-translate="contact_phone">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="instagram" class="form-control" placeholder="Instagram" data-translate="contact_instagram">
+                        </div>
+                        <div class="mb-3">
+                            <select name="plan" id="selectedPlan" class="form-control" required>
+                                <option value="Instagram" data-price="499" data-translate="plan_instagram">Instagram</option>
+                                <option value="TikTok" data-price="1499" data-translate="plan_tiktok">TikTok</option>
+                                <option value="Instagram + TikTok" data-price="2499" data-translate="plan_full">Instagram + TikTok</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="5" required placeholder="Wiadomość" data-translate="contact_message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" data-translate="contact_button">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-0" data-translate="copyright">© 2024 Vika SMM. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./translations.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Додайте перед закриваючим тегом body -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                    <h4 class="modal-title mb-3" data-translate="form_success_title">Dziękujemy!</h4>
+                    <p class="mb-0" data-translate="form_success_message">Skontaktujemy się z Tobą jak najszybciej.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-translate="form_success_close">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

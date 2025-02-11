@@ -1,0 +1,578 @@
+/* Загальні стилі */
+:root {
+    --primary-pink: rgba(255, 105, 180, 0.85); /* Hot pink з прозорістю */
+    --primary-pink-hover: rgba(255, 105, 180, 0.95);
+    --primary-pink-light: rgba(255, 105, 180, 0.1);
+    --dark-gray: #2b2b2b;
+    --light-gray: #f8f6f6;
+    --font-main: 'Atkinson Hyperlegible', sans-serif;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css');
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: var(--font-main);
+    font-weight: 700;
+}
+
+/* Герой секція */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('./hero-tulips.jpg') center/cover;
+    margin-top: -76px;
+    position: relative;
+    background-position: center 20%;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),
+    linear-gradient(
+        45deg,
+        rgba(255, 105, 180, 0.3),
+        rgba(0, 0, 0, 0.5)
+    );
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero .lead {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Навігація */
+.navbar {
+    padding: 1.5rem 0;
+    background-color: rgba(255,255,255,0.98) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem !important;
+    color: var(--dark-gray) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-pink) !important;
+}
+
+/* Картки послуг */
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+}
+
+.service-card i {
+    color: var(--primary-pink);
+    opacity: 0.9;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.3px;
+    margin: 1.5rem 0;
+}
+
+/* Картки з тарифами */
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-pink);
+    background: linear-gradient(to bottom, white, var(--primary-pink-light));
+}
+
+.card-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+.card-price span {
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+}
+
+.pricing-card ul li i {
+    color: var(--primary-pink);
+    margin-right: 10px;
+}
+
+.pricing-card .card-title {
+    font-size: 2rem;
+    letter-spacing: 0.3px;
+}
+
+/* Кнопки */
+.btn-primary {
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-radius: 30px;
+    background: var(--primary-pink);
+    border-color: transparent;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-pink-hover);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+/* Форма контактів */
+.form-control {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+/* Додайте стилі для нових полів форми */
+input[type="tel"].form-control,
+input[type="text"].form-control {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+input[type="tel"].form-control:focus,
+input[type="text"].form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+/* Стилі для select */
+select.form-control {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+select.form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+/* Замініть існуючі стилі валідації телефону на: */
+input[type="tel"]:not(:placeholder-shown):invalid {
+    border-color: #dc3545;
+}
+
+input[type="tel"]:not(:placeholder-shown):invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Повідомлення про помилку */
+input[type="tel"]:not(:placeholder-shown):invalid + .invalid-feedback {
+    display: block;
+}
+
+/* Секції */
+section {
+    position: relative;
+}
+
+section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Футер */
+footer {
+    background-color: var(--dark-gray) !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    opacity: 0.9;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+        margin: 2rem 0;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Додайте до існуючого CSS */
+.language-switcher {
+    margin-left: 1rem;
+}
+
+.flag-img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    margin-right: 8px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+}
+
+/* Оновимо стилі для мобільного меню */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: relative;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav {
+        margin-top: 3rem; /* Місце для мовного перемикача */
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .navbar-toggler {
+        order: 3;
+        padding: 0.5rem;
+        border: none;
+        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: none !important;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background-color: var(--dark-gray);
+        transition: all 0.3s ease;
+        left: 8px;
+    }
+
+    .navbar-toggler-icon {
+        top: 19px;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+        top: 8px;
+    }
+
+    /* Анімація для відкритого меню */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-color: transparent;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* Плавне відкриття/закриття меню */
+    .navbar-collapse {
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.collapsing {
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        transition: all 0.3s ease;
+    }
+
+    /* Центрування пунктів меню */
+    .nav-item {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-link {
+        display: inline-block;
+    }
+
+    /* Стилі для випадаючого меню мов на мобільних */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: #fff;
+        border: 0;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .dropdown-item {
+        justify-content: center;
+    }
+}
+
+/* Оновлюємо стилі для випадаючого меню */
+.dropdown-menu {
+    min-width: 160px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-gray);
+}
+
+/* Оновлені заголовки секцій */
+section h2 {
+    font-size: 2.8rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, 
+        rgba(255, 105, 180, 0.4),
+        rgba(255, 105, 180, 0.9),
+        rgba(255, 105, 180, 0.4)
+    );
+    border-radius: 2px;
+}
+
+/* Додайте ці стилі до існуючого CSS */
+.features-group {
+    margin: 1.5rem 0;
+}
+
+.features-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-pink);
+}
+
+.features-group ul {
+    margin-bottom: 1.5rem;
+}
+
+.features-group ul:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-card .card-body {
+    padding: 2rem;
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    border: 2px solid var(--primary-pink);
+}
+
+/* Стилі для сторінки подяки */
+.thanks-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url('./hero-tulips.jpg') center/cover;
+}
+
+.thanks-page h1 {
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.thanks-page p {
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+}
+
+/* Додайте стилі для модального вікна */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body i {
+    color: var(--primary-pink);
+}
+
+.modal-footer .btn {
+    min-width: 120px;
+}
+
+/* Додайте стилі для стану завантаження кнопки */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-loading span {
+    visibility: hidden;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+} 
