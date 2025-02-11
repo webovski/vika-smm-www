@@ -207,7 +207,7 @@ const translations = {
         instagram_features_title: "Instagram:",
         tiktok_features_title: "TikTok:",
         brand_name: "Vika SMM",
-        copyright: "© 5 Vika SMM. Всі права захищені.",
+        copyright: "© 2025 Vika SMM. Всі права захищені.",
         form_success_title: "Дякуємо!",
         form_success_message: "Ми зв'яжемося з вами найближчим часом.",
         form_success_close: "Закрити",
