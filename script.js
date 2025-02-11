@@ -205,4 +205,8 @@ document.addEventListener('DOMContentLoaded', function() {
             block: 'start'
         });
     });
+
+    if (window.location.protocol !== 'https:') {
+        window.location.replace(`https:${window.location.href.substring(window.location.protocol.length)}`);
+    }
 }); 
