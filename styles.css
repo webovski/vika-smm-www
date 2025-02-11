@@ -53,6 +53,14 @@ h1, h2, h3, .navbar-brand {
 .hero .container {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .row {
+    width: 100%;
 }
 
 .hero h1 {
@@ -62,6 +70,10 @@ h1, h2, h3, .navbar-brand {
     margin-bottom: 1.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .lead {
@@ -70,6 +82,10 @@ h1, h2, h3, .navbar-brand {
     letter-spacing: 0.3px;
     margin-bottom: 2rem;
     color: white;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Навігація */
@@ -126,6 +142,9 @@ h1, h2, h3, .navbar-brand {
 
 /* Картки з тарифами */
 .pricing-card {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 20px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -147,11 +166,17 @@ h1, h2, h3, .navbar-brand {
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--primary-pink);
+    position: relative;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .card-price span {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--dark-gray);
+    display: inline-block;
+    margin-left: 0.3rem;
+    font-weight: normal;
 }
 
 .pricing-card ul li {
@@ -458,24 +483,14 @@ section h2 {
 }
 
 section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(to right, 
-        rgba(255, 105, 180, 0.4),
-        rgba(255, 105, 180, 0.9),
-        rgba(255, 105, 180, 0.4)
-    );
-    border-radius: 2px;
+    display: none;
 }
 
 /* Додайте ці стилі до існуючого CSS */
 .features-group {
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .features-group h4 {
@@ -490,10 +505,6 @@ section h2::after {
 
 .features-group ul:last-child {
     margin-bottom: 0;
-}
-
-.pricing-card .card-body {
-    padding: 2rem;
 }
 
 .pricing-card.featured {
@@ -574,5 +585,263 @@ section h2::after {
     }
     to {
         transform: rotate(1turn);
+    }
+}
+
+/* Оновлені стилі для слайдера */
+.testimonials-slider {
+    padding: 20px 0;
+    margin-bottom: 60px; /* Відступ для пагінації */
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: -40px !important; /* Відсуваємо пагінацію вниз */
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin: 1rem;
+    text-align: center;
+    height: 100%; /* Фіксована висота для всіх карток */
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.testimonial-info {
+    text-align: left;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--dark-gray);
+    flex-grow: 1; /* Текст займає весь вільний простір */
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--primary-pink);
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-business {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-pink) !important;
+}
+
+/* Оновлюємо позицію стрілки */
+.scroll-arrow {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+/* Додаємо ефект при наведенні */
+.scroll-arrow:hover {
+    transform: translateX(-50%) translateY(10px);
+}
+
+.scroll-arrow span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll-arrow 2s infinite;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.scroll-arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.scroll-arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes scroll-arrow {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Оновлюємо позицію блоку економії */
+.price-save {
+    position: absolute;
+    bottom: -56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: var(--primary-pink);
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    white-space: nowrap;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.3);
+    border: 2px solid var(--primary-pink);
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+.pricing-card.featured .price-save {
+    background: white;
+    color: var(--primary-pink);
+    border: 2px solid var(--primary-pink);
+}
+
+/* Додаємо розділювальну лінію для окремих тарифів */
+.pricing-card:not(.featured) .features-group {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.pricing-card:not(.featured) .features-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 105, 180, 0.1),
+        var(--primary-pink),
+        rgba(255, 105, 180, 0.1)
+    );
+    opacity: 0.8;
+}
+
+/* Оновлюємо відступи для центральної картки */
+.pricing-card.featured .card-price {
+    margin-bottom: 5rem;
+}
+
+/* Оновлюємо позицію блоку економії */
+.price-save {
+    position: absolute;
+    bottom: -56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: var(--primary-pink);
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    white-space: nowrap;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.3);
+    border: 2px solid var(--primary-pink);
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+/* Збільшуємо відступ для контенту після блоку економії */
+.pricing-card.featured .features-group {
+    margin-top: 3rem;
+    padding-top: 0;
+}
+
+/* Анімація пульсації */
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.05);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Оновлюємо відступи для ціни в крайніх картках */
+.pricing-card:not(.featured) .card-price {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card:not(.featured) .card-price {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card.featured .card-price {
+    margin-bottom: 5rem;
+}
+
+.pricing-card:not(.featured) .features-group {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.pricing-card:not(.featured) .features-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 105, 180, 0.1),
+        var(--primary-pink),
+        rgba(255, 105, 180, 0.1)
+    );
+    opacity: 0.8;
+}
+
+.pricing-card.featured .features-group {
+    margin-top: 3rem;
+    padding-top: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.05);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
     }
 } 

@@ -1,3 +1,31 @@
+// Спільні відгуки для обох мов
+const sharedTestimonials = [
+    {
+        text: "Віка чудово розуміє специфіку роботи з Instagram Reels. Завдяки її стратегії наш салон отримав багато нових клієнтів. Професійний підхід та завжди на зв'язку! За 3 місяці співпраці кількість клієнтів зросла вдвічі. Рекомендую!",
+        author: "Наталія",
+        business: "Novaja sp. z o. o.",
+        avatar: "./natalia.jpg"
+    },
+    {
+        text: "Świetna współpraca! Wiktoria przygotowała doskonały plan treści dla naszych Reels na Instagramie. Widać, że zna się na rzeczy! Dzięki jej strategii nasze zasięgi wzrosły o 300% w ciągu dwóch miesięcy. Profesjonalne podejście i świetna komunikacja.",
+        author: "Małgosia",
+        business: "Warsaw Beauty Bar",
+        avatar: "https://ui-avatars.com/api/?name=Małgorzata&background=ff69b4&color=fff"
+    },
+    {
+        text: "Дякую Вікторії за чудову стратегію запуску в TikTok. За перший місяць ми набрали більше 10к підписників в телеграм через TikTok, а за три місяці вийшли на 50k! Результат перевершив всі очікування. Окремо хочу відмітити глибокий аналіз ніші та конкурентів.",
+        author: "Володимир",
+        business: "Vlodek JD",
+        avatar: "./volodymyr.jpg"
+    },
+    {
+        text: "Współpraca z Wiktorią to sama przyjemność! Wszystko dokładnie wytłumaczyła, pokazała jak działa algorytm i pomogła rozwinąć nasz profil. Szczególnie doceniam jej wiedzę o działaniu algorytmów i umiejętność przekazania tej wiedzy w prosty sposób. Polecam!",
+        author: "Justyna",
+        business: "Biuro rachunkowe",
+        avatar: "https://ui-avatars.com/api/?name=Justyna&background=ff69b4&color=fff"
+    }
+];
+
 const translations = {
     pl: {
         nav_services: "Usługi",
@@ -19,9 +47,9 @@ const translations = {
         plan_tiktok: "TIKTOK",
         plan_full: "INSTAGRAM + TIKTOK",
         
-        instagram_price: "1299 zł",
-        tiktok_price: "1499 zł",
-        full_price: "2499 zł",
+        instagram_price: "999 zł",
+        tiktok_price: "999 zł",
+        full_price: "1499 zł",
         
         common_features: [
             "Analiza grupy docelowej",
@@ -59,6 +87,7 @@ const translations = {
         plan_standard: "STANDARD",
         plan_pro: "PRO",
         price_month: "/miesiąc",
+        price_save: "Oszczędzasz 499 zł",
         price_button: "Wybierz Plan",
         test_feature1: "2 posty tygodniowo",
         test_feature2: "Podstawowa analityka",
@@ -82,7 +111,7 @@ const translations = {
         instagram_features_title: "Instagram:",
         tiktok_features_title: "TikTok:",
         brand_name: "Vika SMM",
-        copyright: "© 2024 Vika SMM. Wszystkie prawa zastrzeżone.",
+        copyright: "© 2025 Vika SMM. Wszystkie prawa zastrzeżone.",
         form_success_title: "Dziękujemy!",
         form_success_message: "Skontaktujemy się z Tobą jak najszybciej.",
         form_success_close: "Zamknij",
@@ -91,6 +120,8 @@ const translations = {
         contact_instagram: "Instagram (opcjonalnie)",
         contact_phone_error: "Proszę wprowadzić prawidłowy numer telefonu (minimum 9 cyfr)",
         select_plan: "Wybierz plan",
+        testimonials_title: "Opinie klientów",
+        testimonials: sharedTestimonials
     },
     uk: {
         nav_services: "Послуги",
@@ -112,9 +143,9 @@ const translations = {
         plan_tiktok: "TIKTOK",
         plan_full: "INSTAGRAM + TIKTOK",
         
-        instagram_price: "1299 zł",
-        tiktok_price: "1499 zł",
-        full_price: "2499 zł",
+        instagram_price: "999 zł",
+        tiktok_price: "999 zł",
+        full_price: "1499 zł",
         
         common_features: [
             "Аналіз цільової аудиторії",
@@ -152,6 +183,7 @@ const translations = {
         plan_standard: "СТАНДАРТ",
         plan_pro: "ПРО",
         price_month: "/місяць",
+        price_save: "Економія 499 zł",
         price_button: "Обрати План",
         test_feature1: "2 пости на тиждень",
         test_feature2: "Базова аналітика",
@@ -175,7 +207,7 @@ const translations = {
         instagram_features_title: "Instagram:",
         tiktok_features_title: "TikTok:",
         brand_name: "Vika SMM",
-        copyright: "© 2024 Vika SMM. Всі права захищені.",
+        copyright: "© 5 Vika SMM. Всі права захищені.",
         form_success_title: "Дякуємо!",
         form_success_message: "Ми зв'яжемося з вами найближчим часом.",
         form_success_close: "Закрити",
@@ -184,5 +216,7 @@ const translations = {
         contact_instagram: "Instagram (опціонально)",
         contact_phone_error: "Будь ласка, введіть правильний номер телефону (мінімум 9 цифр)",
         select_plan: "Оберіть тариф",
+        testimonials_title: "Відгуки клієнтів",
+        testimonials: sharedTestimonials
     }
 }; 

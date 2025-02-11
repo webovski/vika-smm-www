@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Навігація -->
@@ -69,6 +71,11 @@
                     <h1 data-translate="hero_title">Twój Sukces w Social Media</h1>
                     <p class="lead" data-translate="hero_subtitle">Profesjonalne zarządzanie mediami społecznościowymi dla branży beauty</p>
                     <a href="#services" class="btn btn-primary btn-lg mt-4" data-translate="hero_button">Poznaj Nasze Usługi</a>
+                    <div class="scroll-arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,6 +111,19 @@
         </div>
     </section>
 
+    <!-- Додайте після секції services і перед pricing -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-translate="testimonials_title">Відгуки</h2>
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Слайди будуть додаватися через JavaScript -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Тарифи -->
     <section id="pricing" class="py-5 bg-light">
         <div class="container">
@@ -113,7 +133,10 @@
                     <div class="card pricing-card">
                         <div class="card-body">
                             <h3 class="card-title text-center" data-translate="plan_instagram">Instagram</h3>
-                            <h2 class="card-price text-center">1299 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="card-price text-center">
+                                999 zł
+                                <span data-translate="price_month">/місяць</span>
+                            </div>
                             <div class="features-group">
                                 <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
                                 <ul class="list-unstyled common-features">
@@ -132,7 +155,11 @@
                     <div class="card pricing-card featured">
                         <div class="card-body">
                             <h3 class="card-title text-center" data-translate="plan_full">Instagram + TikTok</h3>
-                            <h2 class="card-price text-center">2499 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="card-price text-center">
+                                1499 zł
+                                <span data-translate="price_month">/місяць</span>
+                                <div class="price-save" data-translate="price_save">Економія 499 zł</div>
+                            </div>
                             <div class="features-group">
                                 <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
                                 <ul class="list-unstyled common-features">
@@ -151,7 +178,10 @@
                     <div class="card pricing-card">
                         <div class="card-body">
                             <h3 class="card-title text-center" data-translate="plan_tiktok">TikTok</h3>
-                            <h2 class="card-price text-center">1499 zł<span data-translate="price_month">/miesiąc</span></h2>
+                            <div class="card-price text-center">
+                                999 zł
+                                <span data-translate="price_month">/місяць</span>
+                            </div>
                             <div class="features-group">
                                 <h4 data-translate="basic_features">Podstawowe funkcje:</h4>
                                 <ul class="list-unstyled common-features">
@@ -191,9 +221,9 @@
                         </div>
                         <div class="mb-3">
                             <select name="plan" id="selectedPlan" class="form-control" required>
-                                <option value="Instagram" data-price="499" data-translate="plan_instagram">Instagram</option>
-                                <option value="TikTok" data-price="1499" data-translate="plan_tiktok">TikTok</option>
-                                <option value="Instagram + TikTok" data-price="2499" data-translate="plan_full">Instagram + TikTok</option>
+                                <option value="Instagram" data-price="999" data-translate="plan_instagram">Instagram</option>
+                                <option value="TikTok" data-price="999" data-translate="plan_tiktok">TikTok</option>
+                                <option value="Instagram + TikTok" data-price="1499" data-translate="plan_full">Instagram + TikTok</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -232,5 +262,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html> 

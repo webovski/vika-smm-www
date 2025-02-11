@@ -23,6 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         updateFeatures(lang);
+
+        // Оновлюємо відгуки
+        const testimonials = translations[lang].testimonials;
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        if (swiperWrapper) {
+            swiperWrapper.innerHTML = testimonials.map(testimonial => `
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="${testimonial.avatar}" alt="${testimonial.author}" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-author">${testimonial.author}</div>
+                                <div class="testimonial-business">${testimonial.business}</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">${testimonial.text}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
     }
 
     function updateFeatures(lang) {
@@ -96,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Оновлюємо ціни в тарифах
     document.querySelector('.pricing-card:first-child .card-price').innerHTML = 
-        '499 zł<span data-translate="price_month">/miesiąc</span>';
+        '999 zł<span data-translate="price_month">/місяць</span>';
 
     // Анімація кнопки меню
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -153,5 +173,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const submitButton = document.querySelector('#contactForm button[type="submit"]');
         submitButton.disabled = false;
         submitButton.classList.remove('btn-loading');
+    });
+
+    // Ініціалізація слайдера
+    new Swiper('.testimonials-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    // Додаємо обробник кліку на стрілку
+    document.querySelector('.scroll-arrow').addEventListener('click', function() {
+        document.getElementById('services').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
     });
 }); 
