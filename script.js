@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Встановлюємо початкову мову
-    let currentLang = 'pl';
+    // Змінюємо початкову мову на українську
+    let currentLang = 'uk';
 
     // Функція для оновлення текстів
     function updateTexts(lang) {
